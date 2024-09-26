@@ -3,7 +3,7 @@ import numpy as np
 
 def main():
     # Carregar a imagem
-    img = cv.imread("imagem7.jpg")
+    img = cv.imread("img12.jpg")
     if img is None:
         print('Error opening image!')
         return -1
@@ -12,8 +12,8 @@ def main():
     hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
 
     # Definir a faixa de cor da caneta (exemplo: caneta azul)
-    lower_blue = np.array([ 38, 126, 15])  # Ajuste conforme necessário
-    upper_blue = np.array([ 58, 146, 230])  # Ajuste conforme necessário
+    lower_blue = np.array([  77, 67, 120])  # Ajuste conforme necessário
+    upper_blue = np.array([ 97, 77, 200])  # Ajuste conforme necessário
 
     # Criar uma máscara para a cor da caneta
     mask = cv.inRange(hsv, lower_blue, upper_blue)
